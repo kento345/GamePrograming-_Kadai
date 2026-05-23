@@ -9,6 +9,7 @@ void Random(int* num) {
 }
 
 void Input(int* num) {
+    cout << "”’l‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" << endl;
     cin >> *num;
 }
 
