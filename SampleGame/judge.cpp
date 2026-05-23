@@ -6,6 +6,7 @@ using namespace std;
 
 
 /*
+* 比較してステートをreturn
 * aが入力値,randがランダム値,valueが結果
 */
 State Comparison(int a,int rand) {
@@ -20,7 +21,9 @@ State Comparison(int a,int rand) {
 		return State::Saffe;
 	}
 }
-
+/*
+* ステートを元にboolをreturn
+*/
 bool Result(State x) {
 	switch (x)
 	{
