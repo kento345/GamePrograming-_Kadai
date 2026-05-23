@@ -5,9 +5,9 @@
 
 using namespace std;
 
-void Random(int* num);
+int Random_();
 
-void Input(int* num);
+int Input();
 
 
 

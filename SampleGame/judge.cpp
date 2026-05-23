@@ -2,33 +2,40 @@
 #include "judge.h"
 using namespace std;
 
+
+
+
 /*
 * aが入力値,randがランダム値,valueが結果
 */
-void Comparison(int a,int rand,int* value) {
+State Comparison(int a,int rand) {
 	if (a > rand) {
 		//大きい時
-		*value = 1;
+		return State::Big;
 	}
 	else if (a < rand) {
-		*value = 2;
+		return State::Small;
 	}
 	else {
-		*value = 3;
+		return State::Saffe;
 	}
 }
 
-void Result(int value) {
-	switch (value)
+bool Result(State x) {
+	switch (x)
 	{
-	case 1:
+	case State::Big:
 		cout << "大きいです" << endl;
+		return false;
 		break;
-	case 2:
+	case State::Small:
 		cout << "小さいです" << endl;
+		return false;
 		break;
-	case 3:
+	case State::Saffe:
 		cout << "ゲームクリア" << endl;
+		return true;
 		break;
 	}
+	return false;
 }

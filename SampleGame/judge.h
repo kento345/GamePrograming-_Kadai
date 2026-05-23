@@ -2,6 +2,11 @@
 #include<iostream>
 using namespace std;
 
-void Comparison(int a,int rand,int* value);
+enum class State
+{
+	Big, Saffe, Small,error
+};
 
-void Result(int value);
+State Comparison(int a,int rand);
+
+bool Result(State x);

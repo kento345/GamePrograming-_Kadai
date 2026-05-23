@@ -2,15 +2,18 @@
 #include"judge.h"
 
 int main() {
-	int a = 0;
+	
 	int rand;
-	int value = 0;
-	Random(&rand);
-	while (value != 3)
+
+	rand = Random_();
+	while (true)
 	{
-		Input(&a);
-		Comparison(a, rand, &value);
-		Result(value);
+		auto input_value = Input();
+		
+		if (Result(Comparison(input_value, rand))) {
+			break;
+		}
+
 	}
 
 
